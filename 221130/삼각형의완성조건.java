@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public int solution(int[] sides) {
         int answer = 0;
@@ -25,5 +27,9 @@ class Solution {
         }
         
         return answer;
+        
+       // Arrays.sort(sides); // 배열을 Arrays.sort를 통해 정렬해 가장 긴 변을 찾는 방법
+        
+       // return sides[2] < sides[0] + sides[1] ? 1 : 2;
     }
 }
