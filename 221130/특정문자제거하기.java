@@ -8,5 +8,7 @@ class Solution {
             }
         }
         return answer;
+        
+        //answer = my_string.replace(letter,"");   // 스트링 함수인 replace를 통해 letter를 빈칸으로 대체
     }
 }
