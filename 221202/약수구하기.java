@@ -15,5 +15,8 @@ class Solution {
         
         //만약 int[]로 반환한다면,
         //return list.stream().mapToInt(x -> x).toArray();
+        
+        //또는
+        //return IntStream.rangeClosed(1,n).filter(i->n%i==0).toArray();
     }
 }
