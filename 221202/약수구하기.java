@@ -12,5 +12,8 @@ class Solution {
         }
         
         return list;
+        
+        //만약 int[]로 반환한다면,
+        //return list.stream().mapToInt(x -> x).toArray();
     }
 }
