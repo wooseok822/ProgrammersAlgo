@@ -17,7 +17,7 @@ class Solution {
         ch = str.toCharArray();
 
         for(int z=0;z<ch.length;z++){
-            if(Integer.parseInt(ch[z]+"") == com){
+            if(Integer.parseInt(ch[z]+"") == com){    // ch[z]-'0' == com 도 된다.
                 answer++;
             }
         }
