@@ -5,7 +5,7 @@ class Solution {
         int bunja = (num1 * denum2) + (num2 * denum1);
         int bunmo = num1 * num2;
         
-        for(int i=bunmo;i>= 2;i--){   // 분모의 값부터 나누기
+        for(int i=bunmo;i>= 2;i--){   // 분모의 값부터 나누기 또는 최소공배수를 구해서 해도된다.
             if(bunja % i == 0){
                 if(bunmo % i == 0){
                     bunja /= i;
