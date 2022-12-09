@@ -10,13 +10,12 @@ class Solution {
         }
         
         for(int i=0;i<6;i++){
-            for(int j=i+1;j<6;j++)
-                {
-                    if(inclination[i] == inclination[j]) {  // 하나라도 기울기가 같으면 1을 반환
-                        answer = 1;
-                        break;
-                    }
-                }            
+            for(int j=i+1;j<6;j++){
+                if(inclination[i] == inclination[j]) {  // 하나라도 기울기가 같으면 1을 반환
+                    answer = 1;
+                    break;
+                }
+            }            
         }        
         return answer;
     }
