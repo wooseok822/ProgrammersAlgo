@@ -60,8 +60,10 @@ map.get(1); // key 값이 1인 Value 가져오기
 - Set / Collection 객체로 리턴  </br>
 ```java
 Map<String, Integer> map = new HashMap<>();
+
 map.put("apple", 1);
 map.put("banana", 2);
+
 Set<String> keys = map.keySet();
 for (String key : keys) {
   System.out.println(key);
