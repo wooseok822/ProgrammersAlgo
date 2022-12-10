@@ -15,3 +15,29 @@
 ```java
 IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 ```
+
+
+###        ✏️ String
+
+- str1.equals(str2) : str1과 str2의 문자열이 동일한지 비교한 결과값 리턴 </br>
+- str1.indexOf("a") : str1에서 특정 문자(a)가 시작되는 인덱스 리턴 </br>
+- str1.length() : str1의 길이 리턴 </br>
+- str1.substring(2,4) : str1에서 2,3 인덱스에 해당하는 문자열을 뽑아 리턴 </br>
+- str1.toUpperCase() : str1의 문자를 모두 대문자로 변경 </br>
+- str1.toLowerCase() : str1의 문자를 모두 소문자로 변경 </br>
+- str1.concat(str2) : str1의 문자열과 str2의 문자열을 합칠 때 사용 </br>
+- str1.startWith("a") : str1이 지정된 문자(a)로 시작하는지 참거짓으로 리턴 </br>
+- str1.endWith("a") : str1이 지정된 문자(a)로 끝나는지 참거짓으로 리턴 </br>
+- str1.replaceAll("abc","def") : str1에서 문자열 abc를 def로 변경 (첫 번째 인자에 정규식 가능) </br>
+- str1.replace("#","%") : str1에 특정 문자(#)을 지정한 문자(%)로 변경 </br>
+- str1.split("/") : str1에서 지정한 문자(/)를 기준으로 나눈 후 배열로 리턴 </br>
+- str1.trim() : 문자열의 시작과 끝에 있는 공백을 없애준다. 중간은 예외 </br>
+- str1.compareTo(str2) : str1와 str2을 앞에서 순차적으로 비교하다가 틀린 부분이 있으면 값을 반환한다. 예를 들어 str1이 a, str2가 b인 경우 -1이 반환되는데 이는 a의 아스키코드와 b의 아스키코드를 뺀 값이다. </br>
+- str1.contains(str2) : str1에 str2가 포함되는지 참거짓으로 리턴 </br>
+- str1.charAt(idx) : str1의 지정한 인덱스(idx)의 문자 반환 </br>
+
+*** replace와 replaceAll의 차이점 *** </br>
+replace는 첫 번째 인자값에 문자열이 들어가고 replace는 첫 번째 인자값에 정규식이 들어간다. </br>
+예를 들어 str = "aabbcc" </br>
+str.replace("ab","t")      // atbcc </br>
+str.replaceAll("[ab]","t") // ttttcc
