@@ -28,7 +28,8 @@ IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 - str1.concat(str2) : str1의 문자열과 str2의 문자열을 합칠 때 사용 </br>
 - str1.startWith("a") : str1이 지정된 문자(a)로 시작하는지 참거짓으로 리턴 </br>
 - str1.endWith("a") : str1이 지정된 문자(a)로 끝나는지 참거짓으로 리턴 </br>
-- str1.replaceAll("abc","def") : str1에서 문자열 abc를 def로 변경 <첫 번째 인자에 정규식 가능: replaceAll("[대체하고 싶은 문자들]", "대체할 문자") > </br>
+- str1.replaceAll("abc","def") : str1에서 문자열 abc를 def로 변경 </br>
+  <첫 번째 인자에 정규식 가능: replaceAll("[대체하고 싶은 문자들]", "대체할 문자") > </br>
 - str1.replace("#","%") : str1에 특정 문자(#)을 지정한 문자(%)로 변경 </br>
 - str1.split("/") : str1에서 지정한 문자(/)를 기준으로 나눈 후 배열로 리턴 </br>
 - str1.trim() : 문자열의 시작과 끝에 있는 공백을 없애준다. 중간은 예외 </br>
