@@ -36,7 +36,7 @@ IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 - str1.contains(str2) : str1에 str2가 포함되는지 참거짓으로 리턴 </br>
 - str1.charAt(idx) : str1의 지정한 인덱스(idx)의 문자 반환 </br>
 
-*** replace와 replaceAll의 차이점 *** </br>
+**replace와 replaceAll의 차이점** </br>
 replace는 첫 번째 인자값에 문자열이 들어가고 replace는 첫 번째 인자값에 정규식이 들어간다. </br>
 예를 들어 str = "aabbcc" </br>
 str.replace("ab","t")      // atbcc </br>
