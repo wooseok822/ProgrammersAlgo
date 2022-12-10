@@ -11,21 +11,25 @@
 ###        ✏️ Java Stream
 
 - https://wakestand.tistory.com/419 (Java Stream reference link) </br>
-- Stream을 사용한 0 ~ n까지 홀수인 값 배열 출력</br>
+- Stream을 사용해 0 ~ n까지 홀수인 값 배열 출력</br>
 ```java
 IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 ```
-- Stream을 사용한 1 ~ n까지 값 중 i의 배수인 값 개수 출력</br>
+- Stream을 사용해 1 ~ n까지 값 중 i의 배수인 값 개수 출력</br>
 ```java
 (int) IntStream.rangeClosed(1,n).filter(i -> n % i == 0).count();
 ```
-- Stream을 사용한 strArr 배열 정렬한 후 문자열로 출력(오름차순) </br>
+- Stream을 사용해 strArr 배열 정렬한 후 문자열로 출력(오름차순) </br>
 ```java
 String streamSortASC = Stream.of(strArr).sorted().collect(Collectors.joining());
 ```
-- Stream을 사용한 strArr 배열 정렬한 후 문자열로 출력(내림차순) </br>
+- Stream을 사용해 strArr 배열 정렬한 후 문자열로 출력(내림차순) </br>
 ```java
 String streamSortASC = Stream.of(strArr).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
+```
+- Stream을 사용해 str문자열 중 문자들을 빈공간으로 대체하고 정수들을 배열로 정렬시켜 출력 </br>
+```java
+Arrays.stream(str.replaceAll("[A-Z|a-z]","").split("")).sorted().mapToInt(Integer::parseInt).toArray();
 ```
 
 
@@ -53,8 +57,9 @@ String streamSortASC = Stream.of(strArr).sorted(Comparator.reverseOrder()).colle
 replace는 첫 번째 인자값에 문자열이 들어가고 replace는 첫 번째 인자값에 정규식이 들어간다. </br>
 예를 들어 str = "aabbcc" </br>
 str.replace("ab","t")      // atbcc </br>
-str.replaceAll("[ab]","t") // ttttcc
-
+str.replaceAll("[ab]","t") // ttttcc </br>
+str.replaceAll("[A-Z|a-z]","") : str 문자열 중 A부터 Z, a부터 z까지 문자들을 빈 공간으로 대체 </br>
+str.replaceAll("[^0-9]","") : str 문자열 중 0부터 9를 제외한 나머지들을 다 빈 공간으로 대체 </br>
 
 ###        ✏️ 문자(숫자)를 정수로 바꾸려는 경우
 
