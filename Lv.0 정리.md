@@ -1,6 +1,6 @@
 # Lv.0 총 정리
 
-✏️ #####StringBuilder
+##### ✏️StringBuilder
 
 - String과 문자열을 더할 때 새로운 객체를 생성하는 것이 아니라 기존의 데이터에 더하는 방식을 사용하  기 때문에 속도가 빠르며 부하가 적다. </br>
 - StringBuilder sb = new StringBuilder(); 를 통해 선언하고 append를 통해 문자열을 더한다. </br>
