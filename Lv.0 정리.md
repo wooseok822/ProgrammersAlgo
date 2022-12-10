@@ -15,7 +15,10 @@
 ```java
 IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 ```
-
+- Stream을 사용한 1 ~ n까지 값 중 i의 배수인 값 개수 출력</br>
+```java
+(int) IntStream.rangeClosed(1,n).filter(i -> n % i == 0).count();
+```
 
 ###        ✏️ String
 
