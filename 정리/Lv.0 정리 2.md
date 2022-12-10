@@ -29,3 +29,46 @@ IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 (int) IntStream.rangeClosed(1,n).filter(i -> n % i == 0).count();
 ```
 
+
+
+###        ✏️ HashMap
+
+- HashMap은 Map 인터페이스를 구현한 대표적인 Map 컬렉션 </br>
+- Map은 Key와 Value로 구성된 Entry 객체를 저장하는 구조 (Key와 Value는 모두 객체) </br>
+- Value는 중복 저장이 되지만 Key는 중복 저장 될 수 없다. </br>
+- HashMap은 Hashing을 사용하기 때문에 많은 양의 데이터를 검색하는 데 있어서 뛰어난 성능을 보인다. </br>
+- java.util.Map / java.util.HashMap을 import해주어야 한다. </br>
+- 선언 (HashMap<자료형, 자료형> 이름 = new HashMap<>(); </br>
+```java
+HashMap<Integer, String> map = new HashMap<>();
+```
+- 값 넣기 </br>
+```java
+map.put(1, "사과");
+map.put(2, "포도");
+```
+- 값 삭제 </br>
+```java
+map.remove(1); // key 값 제거 (key: 1)
+map.clear(); // 모든 Value 제거
+```
+- 값 가져오기 (map.get(Object key)) </br>
+```java
+map.get(1); // key 값이 1인 Value 가져오기
+```
+
+- Set / Collection 객체로 리턴  </br>
+```java
+Map<String, Integer> map = new HashMap<>();
+map.put("apple", 1);
+map.put("banana", 2);
+Set<String> keys = map.keySet();
+for (String key : keys) {
+  System.out.println(key);
+}
+
+Collection<Integer> values = map.values();
+for (Integer value : values) {
+  System.out.println(value)
+}
+```
