@@ -35,7 +35,10 @@ Arrays.stream(str.replaceAll("[A-Z|a-z]","").split("")).sorted().mapToInt(Intege
 ```java
 (int) Arrays.stream(String.valueOf(num).split("")).map(Integer::parseInt).filter(i -> i==3||i==6||i==9).count()
 ```
-
+- Stream을 사용해 1부터 n까지의 숫자 중 합성수의 개수 </br>
+```java
+(int) IntStream.rangeClosed(1, n).filter(i -> (int) IntStream.rangeClosed(1, i).filter(j -> j % i == 0).count() > 2).count()
+```
 
 ###        ✏️ String
 
