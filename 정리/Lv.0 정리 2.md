@@ -28,11 +28,4 @@ IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 ```java
 (int) IntStream.rangeClosed(1,n).filter(i -> n % i == 0).count();
 ```
-- Stream을 사용한 strArr 배열 정렬한 후 문자열로 출력(오름차순) </br>
-```java
-String streamSortASC = Stream.of(strArr).sorted().collect(Collectors.joining());
-```
-- Stream을 사용한 strArr 배열 정렬한 후 문자열로 출력(내림차순) </br>
-```java
-String streamSortASC = Stream.of(strArr).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
-```
+
