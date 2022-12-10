@@ -13,6 +13,8 @@
 - arrlist.contains("44") : List에 해당 값(44)가 있는지 참거짓으로 리턴 </br>
 - arrlist.remove("33") : List에 해당 값(33)을 삭제 </br>
 - arrlist.remove(0) : List에 해당 인덱스(0) 값을 삭제 </br>
+- String result = String.join(",", arrlist) 를 통해 구분자(,)를 삽입해 하나의 문자열로 출력 </br>
+- arrlist.sort(Comparator.naturalOrder()) : 오름차순으로 정렬 (내림차순: reverseOrder()), java.util.Comparator를 import 해야한다.
 
 
 ###        ✏️ Java Stream
