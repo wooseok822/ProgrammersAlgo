@@ -6,3 +6,12 @@
 - StringBuilder sb = new StringBuilder(); 를 통해 선언하고 append를 통해 문자열을 더한다. </br>
 - StringBuilder의 인스턴스인 sb의 문자열을 출력하기 위해서는 toString()을 쓴다. </br>
 - StringBuilder는 sb.reverse() 처럼 문자열을 거꾸로 출력할 수도 있다. </br>
+
+
+###        ✏️ Java Stream
+
+- https://wakestand.tistory.com/419 (Java Stream reference link) </br>
+- Stream을 사용한 0 ~ n까지 홀수인 값 배열 출력</br>
+```java
+IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
+```
