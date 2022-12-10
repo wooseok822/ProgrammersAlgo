@@ -68,6 +68,16 @@ str.replaceAll("[ab]","t") // ttttcc </br>
 str.replaceAll("[A-Z|a-z]","") : str 문자열 중 A부터 Z, a부터 z까지 문자들을 빈 공간으로 대체 </br>
 str.replaceAll("[^0-9]","") : str 문자열 중 0부터 9를 제외한 나머지들을 다 빈 공간으로 대체 </br>
 
+**응용 문제**
+1. str에서 중복되는 문자는 제거해서 result에 출력
+```java
+for(int i=0;i<str.length();i++){
+  if(!result.contains(String.valueOf(str.charAt(i)))){
+    result += str.charAt(i);
+  }
+}
+```
+
 
 ###        ✏️ 문자(숫자)를 정수로 바꾸려는 경우
 
