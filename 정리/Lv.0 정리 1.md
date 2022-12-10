@@ -19,6 +19,14 @@ IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 ```java
 (int) IntStream.rangeClosed(1,n).filter(i -> n % i == 0).count();
 ```
+- Stream을 사용한 strArr 배열 정렬한 후 문자열로 출력(오름차순) </br>
+```java
+String streamSortASC = Stream.of(strArr).sorted().collect(Collectors.joining());
+```
+- Stream을 사용한 strArr 배열 정렬한 후 문자열로 출력(내림차순) </br>
+```java
+String streamSortASC = Stream.of(strArr).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
+```
 
 ###        ✏️ String
 
@@ -51,4 +59,28 @@ str.replaceAll("[ab]","t") // ttttcc
 
 - 특정문자(숫자)에서 - '0'을 빼준다. (ex. str1.charAt(idx) - '0') </br>
 - Integer.parseInt(문자열)을 통해 정수로 변환한다. (ex.Integer.parseInt("" + str1.charAt(idx))) </br>
+
+###        ✏️ 배열(Array) 정렬
+
+- Arrays.sort() </br>
+- java.util.Arrays 클래스를 사용하면 배열을 정렬, 복제, List로 변환하는 등의 작업을 쉽게 처리 가능하다.</br>
+- Arrays.sort(arr) : arr의 배열을 오름차순으로 정렬 </br>
+- Arrays.sort(arr, Comparator.reverseOrder()) : arr의 배열을 내림차순으로 정렬 </br>
+- Arrays.sort(arr, Collections.reverseOrder()): arr의 배열을 내림차순으로 정렬 </br>
+
+###        ✏️ Comparable / Comparator
+
+- 내림차순이나 원하는 정렬 조건을 설정하기 위해 Comparable 인터페이스의 compareTo() 메서드를 원하는 조건으로 오버라이드하거나 Comparator를 구현한 Class 내의 compare() 메서드를 원하는 정렬 조건으로 오버라이드 할 수 있다. </br>
+- java.util.Arrays 클래스를 사용하면 배열을 정렬, 복제, List로 변환하는 등의 작업을 쉽게 처리 가능하다.</br>
+```java
+class CustomComparator implements Comparator<String> {
+  @Override
+  public int compare(String o1, String o2){
+    return o2.compareTo(o1); //내림차순
+    }
+ }
+ 
+ String[] str = new String[] {"A", "C", "B"};
+ Arrays.sort(str, new CustomComparator());
+```
 
