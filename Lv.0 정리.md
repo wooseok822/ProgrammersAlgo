@@ -45,3 +45,10 @@ replace는 첫 번째 인자값에 문자열이 들어가고 replace는 첫 번�
 예를 들어 str = "aabbcc" </br>
 str.replace("ab","t")      // atbcc </br>
 str.replaceAll("[ab]","t") // ttttcc
+
+
+###        ✏️ 문자(숫자)를 정수로 바꾸려는 경우
+
+- 특정문자(숫자)에서 - '0'을 빼준다. (ex. str1.charAt(idx) - '0') </br>
+- Integer.parseInt(문자열)을 통해 정수로 변환한다. (ex.Integer.parseInt("" + str1.charAt(idx))) </br>
+
