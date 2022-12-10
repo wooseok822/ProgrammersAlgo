@@ -56,7 +56,8 @@ Arrays.stream(str.replaceAll("[A-Z|a-z]","").split("")).sorted().mapToInt(Intege
 - str1.compareTo(str2) : str1와 str2을 앞에서 순차적으로 비교하다가 틀린 부분이 있으면 값을 반환한다. 예를 들어 str1이 a, str2가 b인 경우 -1이 반환되는데 이는 a의 아스키코드와 b의 아스키코드를 뺀 값이다. </br>
 - str1.contains(str2) : str1에 str2가 포함되는지 참거짓으로 리턴 </br>
 - str1.charAt(idx) : str1의 지정한 인덱스(idx)의 문자 반환 </br>
-- String.valueOf(num) : 정수를 문자열로 바꾸고 싶을 때 사용
+- String.valueOf(num) : 정수를 문자열로 바꾸고 싶을 때 사용 </br>
+- str1.toCharArray() : 문자열 str1을 Char형 배열로 변환 </br>
 
 **replace와 replaceAll의 차이점** </br>
 replace는 첫 번째 인자값에 문자열이 들어가고 replace는 첫 번째 인자값에 정규식이 들어간다. </br>
