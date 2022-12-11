@@ -43,6 +43,10 @@ Arrays.stream(str.replaceAll("[A-Z|a-z]","").split("")).sorted().mapToInt(Intege
 ```java
 arr = list.stream().distinct().mapToInt(i->i).toArray();
 ```
+- Stream을 사용해 numList 배열에서 정수 n을 기준으로 n과 가까운 수부터 정렬 (거리가 같으면 더 큰 수를 앞에 정렬) </br>
+```java
+Arrays.stream(numList).boxed().sorted((a, b) -> Math.abs(a - n) == Math.abs(b - n) ? b.compareTo(a) : Integer.compare(Math.abs(a - n), Math.abs(b - n))).mapToInt(Integer::intValue).toArray();
+```
 
 ###        ✏️ String
 
