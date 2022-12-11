@@ -61,3 +61,17 @@ for (Integer value : values) {
   System.out.println(value)
 }
 ```
+
+
+###        ✏️ 이진수
+
+- 2진수를 표현한 문자열을 10진수의 정수로 바꾸는 법 </br>
+ ```java
+Integer.parseInt(문자열, 2);
+```
+- 값을 2진수로 바꾸는 법 </br>
+ ```java
+Integer.toString(값, 2);
+
+Integer.toBinaryString(값);
+```
