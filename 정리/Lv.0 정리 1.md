@@ -39,6 +39,10 @@ Arrays.stream(str.replaceAll("[A-Z|a-z]","").split("")).sorted().mapToInt(Intege
 ```java
 (int) IntStream.rangeClosed(1, n).filter(i -> (int) IntStream.rangeClosed(1, i).filter(j -> j % i == 0).count() > 2).count()
 ```
+- Stream을 사용해 list를 배열로 변환해 arr 배열에 넣기 </br>
+```java
+arr = list.stream().distinct().mapToInt(i->i).toArray();
+```
 
 ###        ✏️ String
 
