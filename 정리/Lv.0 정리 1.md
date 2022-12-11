@@ -72,8 +72,11 @@ replace는 첫 번째 인자값에 문자열이 들어가고 replace는 첫 번�
 예를 들어 str = "aabbcc" </br>
 str.replace("ab","t")      // atbcc </br>
 str.replaceAll("[ab]","t") // ttttcc </br>
-str.replaceAll("[A-Z|a-z]","") : str 문자열 중 A부터 Z, a부터 z까지 문자들을 빈 공간으로 대체 </br>
-str.replaceAll("[^0-9]","") : str 문자열 중 0부터 9를 제외한 나머지들을 다 빈 공간으로 대체 </br>
+
+**활용**
+str.replaceAll("[A-Z|a-z]","") : str 문자열 중 A부터 Z, a부터 z까지 문자들을 제거 </br>
+str.replaceAll("[^0-9]","") : str 문자열 중 0부터 9를 제외한 나머지들을 제거</br>
+str.replaceAll("[^0-9]"," ").split(" ") : str 문자열 중 0부터 9를 제외한 나머지들을 공백으로 대체하고 공백을 기준으로 잘라서 배열로 
 
 **응용 문제**
 1. str에서 중복되는 문자는 제거해서 result에 출력
