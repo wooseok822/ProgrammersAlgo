@@ -13,6 +13,7 @@
 - getLast() / peekLast() : Deque의 앞쪽 엘리먼트를 제거하지 않고 리턴 </br>
 - removeFirstOccurrence(Object o) : Deque의 앞쪽부터 탐색하여 o와 동일한 첫 엘리먼트를 제거 </br>
 - size() : Deque의 크기 </br>
+
 - Deque 선언
 ```java
 import java.util.Deque;
