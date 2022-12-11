@@ -29,7 +29,7 @@ class Solution {
 }
 ```
 
-###        ✏️ 등수매기기
+###        ✏️ 등수 매기기
 
 - 두 과목의 점수를 나타내는 2차원 배열 score가 있다고 가정하자. 해당 배열의 등수를 배열로 출력하라. </br>
 - 
@@ -56,3 +56,27 @@ class Solution {
     }
 }
 ```
+
+###        ✏️ 연속된 수의 합
+
+- 연속된 숫자 num개를 더한 값이 total이 될 때, 정수 배열을 오름차순으로 반환하라 </br>
+
+class Solution {
+    public int[] solution(int num, int total) {
+        int[] answer = new int[num];
+        
+        //ex) 연속된 숫자 3개의 합은 12
+        // (x+1) + (x+2) + (x+3) = 3x + 6 = 12
+        // 6을 구하기 위해 num * (num + 1) / 2를 해준다
+        // start는 x의 값인데 3x + 6 = 12 에서 3x = 6 => x = 2를 나타내기 위해 아래의 식을 사용한다.
+        
+        int nSum = num * (num + 1) / 2;
+        int start = (total - nSum) / num;
+        
+        for(int i=1;i<=num;i++){
+            answer[i-1] = start + i;
+        }
+        
+        return answer;
+    }
+}
