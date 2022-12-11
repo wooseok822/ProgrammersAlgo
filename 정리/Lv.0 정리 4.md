@@ -61,6 +61,7 @@ class Solution {
 
 - 연속된 숫자 num개를 더한 값이 total이 될 때, 정수 배열을 오름차순으로 반환하라 </br>
 
+```java
 class Solution {
     public int[] solution(int num, int total) {
         int[] answer = new int[num];
@@ -80,3 +81,41 @@ class Solution {
         return answer;
     }
 }
+```
+
+###        ✏️ 특이한 정렬
+
+- numlist 배열에서 정수 n과 가까운 값부터 정렬하라 (거리가 같다면 더 큰 수가 앞에 정렬) </br>
+
+```java
+import java.util.*;
+import java.util.stream.Collectors;
+
+class Solution {
+    public int[] solution(int[] numlist, int n) {
+        int[] answer = {};
+        List<Integer> list = Arrays.stream(numlist).boxed().collect(Collectors.toList());
+        // Arrays.stream(numlist) 배열을 선언하고 boxed()를 통해 가공하고 collect(Collectors.toList())를 통해 List 타입으로 반환
+        
+        list.sort((o1, o2) -> {   // 정렬
+            int o1s = Math.abs(o1 - n);
+            int o2s = Math.abs(o2 - n);
+            
+            if(o1s == o2s){ // 거리가 같다면
+                if(o1 > o2) return -1; // o1이 o2 보다 더 크면 그대로 o1을 앞에 출력
+                else if(o1 < o2) return 1; // o2가 o1보다 더 크면 반대로 o2를 앞에 출력
+            } else {
+                return o1s - o2s;
+            }
+                return 0;
+            
+        });
+        
+        answer = list.stream().mapToInt(Integer :: intValue).toArray();
+        // list.stream() 선언 mapToInt를 통해 정수로 변환해 toArray()로 배열로 반환
+        
+        
+        return answer;
+    }
+}
+```
