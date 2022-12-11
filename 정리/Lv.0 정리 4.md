@@ -32,7 +32,6 @@ class Solution {
 ###        ✏️ 등수 매기기
 
 - 두 과목의 점수를 나타내는 2차원 배열 score가 있다고 가정하자. 해당 배열의 등수를 배열로 출력하라. </br>
-- 
 ```java
 import java.util.*;
 
