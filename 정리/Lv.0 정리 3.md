@@ -82,3 +82,35 @@ class Solution {
 }
 ```
 
+
+###        ✏️ 유한소수 판별하기
+
+- 소수점 아래가 유한개인 소수를 유한소수라 한다. 기약분수로 나타내었을 때 분모의 소인수가 2와 5만 존재해야한다. </br>
+```java
+class Solution {
+    public int solution(int a, int b) {
+        int newB = b / gcd(a, b);
+
+        while (newB != 1) {
+            if (newB % 2 == 0) {   // 2로 계속 나누기
+                newB /= 2;
+            } else if (newB % 5 == 0) { // 5로 계속 나누기
+                newB /= 5;
+            } else {
+                return 2;
+            }
+        }
+
+        return 1;
+    }
+
+    private int gcd(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            return gcd(b, a % b);
+        }
+    }
+}
+```
+
