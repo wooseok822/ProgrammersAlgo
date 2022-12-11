@@ -88,8 +88,13 @@ for(int i=0;i<str.length();i++){
 - Integer.parseInt(문자열)을 통해 정수로 변환한다. (ex.Integer.parseInt("" + str1.charAt(idx))) </br>
 
 
-###        ✏️ 배열(Array) 정렬
+###        ✏️ 배열(Array) 정렬 및 복사
 
+- 배열 복사
+```java
+int[] arr1 = {1, 2, 3};
+int[] arr2 = Arrays.copyOf(arr1, arr1.length); // Arrays.copyOf(배열, 배열길이)
+```
 - Arrays.sort() </br>
 - java.util.Arrays 클래스를 사용하면 배열을 정렬, 복제, List로 변환하는 등의 작업을 쉽게 처리 가능하다.</br>
 - Arrays.sort(arr) : arr의 배열을 오름차순으로 정렬 </br>
