@@ -2,29 +2,12 @@
 
 ###        ✏️ SQL
 
-- a/b + c/d = ((b * c) + (d * a)) / (b * d) </br>
+- != 와 <>는 같은 의미이며 성능의 차이는 없다. </br>
 
-```java
-class Solution {
-    public int[] solution(int denum1, int num1, int denum2, int num2) {
-        int[] answer = new int[2];
-        
-        int bunja = (num1 * denum2) + (num2 * denum1);
-        int bunmo = num1 * num2;
-        
-        for(int i=bunmo;i>= 2;i--){   // 분모의 값부터 나누기 또는 최소공배수를 구해서 해도된다.
-            if(bunja % i == 0){
-                if(bunmo % i == 0){
-                    bunja /= i;
-                    bunmo /= i;
-                }
-            }
-        }
-        
-        answer[0] = bunja;
-        answer[1] = bunmo;
-        
-        return answer;
-    }
-}
+```mysql
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+WHERE 1=1
+AND INTAKE_CONDITION != 'Aged' # != 대신 <>도 가능(성능의 차이는 없다)
+ORDER BY ANIMAL_ID ASC;
 ```
