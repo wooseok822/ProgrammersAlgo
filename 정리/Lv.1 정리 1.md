@@ -16,14 +16,14 @@ ORDER BY ANIMAL_ID ASC;
 
 - MySql에서는 LIMIT, Oracle에서는 ROWNUM을 활용한다. </br>
 
-```mysql
+```sql
 SELECT NAME
 FROM ANIMAL_INS
 ORDER BY DATETIME ASC
 LIMIT 1    # LIMIT 0,3 은 위에서부터 0 ~ 3까지 
 ```
 
-```mysql
+```sql
 SELECT NAME
 FROM (SELECT *
      FROM ANIMAL_INS
