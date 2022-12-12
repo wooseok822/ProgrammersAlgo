@@ -47,6 +47,10 @@ arr = list.stream().distinct().mapToInt(i->i).toArray();
 ```java
 Arrays.stream(numList).boxed().sorted((a, b) -> Math.abs(a - n) == Math.abs(b - n) ? b.compareTo(a) : Integer.compare(Math.abs(a - n), Math.abs(b - n))).mapToInt(Integer::intValue).toArray();
 ```
+- Stream을 사용해 arr 배열의 평균을 구하라 </br>
+```java
+(double) Arrays.stream(arr).average().orElse(0);
+```
 
 ###        ✏️ String
 
