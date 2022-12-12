@@ -23,7 +23,7 @@ ORDER BY DATETIME ASC
 LIMIT 1    # LIMIT 0,3 은 위에서부터 0 ~ 3까지 
 ```
 
-```Oracle
+```mysql
 SELECT NAME
 FROM (SELECT *
      FROM ANIMAL_INS
