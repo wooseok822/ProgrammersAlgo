@@ -1,8 +1,8 @@
 SELECT NAME
 FROM ANIMAL_INS
 ORDER BY DATETIME ASC
-LIMIT 1
-
+LIMIT 1 # 가장 위에 레코드 추출
+# LIMIT 0,3 -> 위에서 부터 0 ~ 3까지 추출
 
 
 
