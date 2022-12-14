@@ -42,3 +42,17 @@ WHERE NAME IS NOT NULL # NAME 컬럼에 NULL이 아닌 것들 추출 (NULL을 �
 ORDER BY ANIMAL_ID;
 ```
 
+
+###        ✏️ SQL (case를 사용한 count)
+
+- table_1 테이블에서 col_1 컬럼의 값이 123인 것의 개수를 카운트 </br>
+```sql
+SELECT COUNT(CASE WHEN col_1 = '123' THEN 1 END)
+FROM table_1
+```
+
+- table_1 테이블에서 col_1 컬럼의 값이 123과 321인 것의 개수를 카운트 </br>
+```sql
+SELECT COUNT(CASE WHEN col_1 = '123' THEN 1 END), COUNT(CASE WHEN col_1 = '321' THEN 1 END)
+FROM table_1 
+```
