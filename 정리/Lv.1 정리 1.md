@@ -56,3 +56,13 @@ FROM table_1
 SELECT COUNT(CASE WHEN col_1 = '123' THEN 1 END), COUNT(CASE WHEN col_1 = '321' THEN 1 END)
 FROM table_1 
 ```
+
+###        ✏️ SQL (MAX)
+
+- 해당 컬럼에서 가장 큰 값 (예를 들어 price의 가격이 가장 비싼 값) </br>
+```sql
+SELECT MAX(PRICE) AS MAX_PRICE
+FROM PRODUCT
+```
+
+
