@@ -11,6 +11,8 @@
 ###        ✏️ Java Stream
 
 - https://wakestand.tistory.com/419 (Java Stream reference link) </br>
+- import java.util.stream 필수!!! (import java.util.stream.IntStream) </br>
+
 - Stream을 사용해 0 ~ n까지 홀수인 값 배열 출력</br>
 ```java
 IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
