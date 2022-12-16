@@ -14,3 +14,7 @@ class Solution {
         return p_cnt == y_cnt ? true : false;
     }
 }
+
+// s = s.toUpperCase();
+
+// return s.chars().filter( e -> 'P'== e).count() == s.chars().filter( e -> 'Y'== e).count();  s 문자열을 chars()를 사용해 문자로 바꾸고 필터 활용 후 개수 세기
